@@ -1,0 +1,94 @@
+.skill h1 {
+    font-size: 250%;
+}
+.skills {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+.skills a {
+    color: rgba(53, 53, 53, 0.87);
+    text-decoration: none;
+}
+.skill {
+    background-color: rgb(255, 255, 255);
+    width: 25rem;
+    height: 15rem;
+    border-radius: 15px;
+    padding: 2rem;
+    align-content: center;
+    box-shadow: 2px 2px 12px rgba(37, 37, 37, 0.479);
+    box-sizing: border-box;
+    transition: ease 0.1s;
+}
+.skill:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
+.lang {
+    width: 70px;
+    height: 70px;
+    margin-bottom: -1rem;
+}
+
+.progressbar {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 20px;
+    background-color: rgb(139, 139, 139);
+    z-index: 1;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+.progressbar span {
+    z-index: 3;
+}
+
+.progresscpp, .progressjs, .progressreact, .progresscs, .progresshtml, .progresscss {
+    height: 100%;
+    border-radius: 20px 0px 0px 20px;
+    background-color: #b85300;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    animation: loadinn 1.5s ease forwards;
+}
+
+.progresscpp { --target: 40%; }
+.progressjs { --target: 52%; }
+.progressreact { --target: 20%; }
+.progresscs { --target: 35%; }
+.progresshtml { --target: 90%; }
+.progresscss { --target: 75%; }
+
+
+@keyframes loadinn {
+  from { width: 0%; }
+  to { width: var(--target); }
+}
+@media (prefers-color-scheme: dark) {
+    .skill {
+        background-color: rgb(63, 63, 63);
+    }
+    .skills a {
+        color: rgba(255, 255, 255, 0.863);
+    }
+     .skill img {
+        filter: invert(100%);
+    }
+
+}
+@media (max-width: 480px) {
+    .skill {
+        width: 20rem;
+    }
+}

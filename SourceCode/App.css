@@ -1,0 +1,139 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.app-content {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: fadeIn 0.8s ease forwards;
+}
+.socials {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.soc {
+  transition: ease 0.1s;
+  width: 45px;
+  height: 45px;
+}
+.soc:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  filter: invert(15%);
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 20rem;
+  border: 10px solid #b85300;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.profile img:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow:
+    0 0 10px rgba(184, 83, 0, 0.7),
+    0 0 20px rgba(184, 83, 0, 0.5),
+    0 0 30px rgba(184, 83, 0, 0.35);
+  cursor: pointer;
+}
+
+
+.introduce {
+  font-size: 300%;
+  margin-bottom: 0rem;
+}
+.highlight {
+  color: #b85300;
+  text-shadow:
+    0 0 2px rgba(184, 83, 0, 0.75),
+    0 0 4px rgba(184, 83, 0, 0.55);
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+.textabout h2 {
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .profile img {
+    width: 15rem;
+    border-width: 7px;
+  }
+  
+  .introduce {
+    font-size: 200%;
+  }
+  
+  .soc {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .socials {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile img {
+    width: 12rem;
+    border-width: 5px;
+  }
+  .textabout h2 {
+    font-size: 95%;
+  }   
+  .introduce {
+    font-size: 150%;
+  }
+  
+  .soc {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .socials {
+    gap: 10px;
+    margin-top: 1.5rem;
+  }
+  
+}
+@media (prefers-color-scheme: dark) {
+    .soc {
+      filter: invert(100%);
+    }
+    .soc:hover {
+      filter: invert(60%);
+    }
+}
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(15px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}

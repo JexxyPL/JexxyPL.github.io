@@ -1,0 +1,126 @@
+.projects {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    min-height: 200px;
+}
+
+.project {
+    flex-shrink: 0;
+    position: relative;
+    background-color: rgb(218, 218, 218);
+    width: 25rem;
+    height: 15rem;
+    min-width: 20rem;
+    min-height: 15rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 2px 2px 12px rgba(37, 37, 37, 0.479);
+    text-align: center;
+    transition: 0.2s ease;
+}
+
+.project img {
+    background-color: rgb(218, 218, 218);
+    width: 100%;
+    height: 100%;
+    filter: blur(6px);
+    object-fit: cover;
+    display: block;
+    transition: ease 0.2s;
+}
+.project:hover img {
+    filter: blur(2px);
+}
+
+.techs {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    background-color: rgba(44, 44, 44, 0.5);
+    backdrop-filter: blur(15px);
+    padding: 0.75rem;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.tech {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 90%;
+    background-color: #b85300;
+    border-radius: 10px;
+    height: 2.25rem;
+    padding: 0 0.5rem;
+    transition: ease 0.2s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.project:hover .tech {
+    background-color: rgba(53, 53, 53, 0.87);
+    color: #b85300;
+}
+
+.project h1 {
+    white-space: nowrap;
+    position: absolute;
+    font-weight: bolder;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    margin: 0;
+    color: rgb(243, 243, 243);
+    text-align: center;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    font-size: 2rem;
+    z-index: 3;
+}
+@media (prefers-color-scheme: dark) {
+    .project {
+        background-color: rgb(63, 63, 63);
+    }
+    .project img {
+        background-color: rgb(63, 63, 63);
+    }
+
+}
+
+@media (max-width: 480px) {
+    .projects {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+    
+    .project {
+        width: 100%;
+        max-width: 25rem;
+        height: 15rem;
+    }
+    
+    .techs {
+        justify-content: flex-start;
+    }
+    
+    .tech {
+        font-size: 80%;
+        height: 2rem;
+        padding: 0 0.25rem;
+    }
+}
