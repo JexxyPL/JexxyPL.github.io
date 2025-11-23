@@ -59,7 +59,7 @@ function App() {
         <section className="socials">
           <a href="https://github.com/JexxyPL" target="_blank" rel="noopener noreferrer"><img src={gitlogo} alt="git" srcset="" className="soc" /></a>
           <a href="https://steamcommunity.com/id/JexxyPL/" target="_blank" rel="noopener noreferrer"><img src={steamlogo} alt="discord" srcset="" className="soc" /></a>
-          <a href="https://www.youtube.com/@JexxyTM" target="_blank" rel="noopener noreferrer"><img src={ytlogo} alt="youtube" srcset="" className="soc" /></a>
+          <a href="https://www.youtube.com/@JexxyPL" target="_blank" rel="noopener noreferrer"><img src={ytlogo} alt="youtube" srcset="" className="soc" /></a>
         </section>
       </section>
     </div>
