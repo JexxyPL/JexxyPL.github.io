@@ -4,9 +4,7 @@
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(53, 53, 53, 0.87);
-  background-color: #fefefe;
-  background-image: url(assets/background.png);
-
+  background: linear-gradient(130deg, #fdf2e4, #dbc8b0);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,8 +26,8 @@ html {
 }
 @media (prefers-color-scheme: dark) {
     :root {
-        background-color: rgba(41, 41, 41, 0.87);
-        background-image: url(assets/background2.png);
+        background: linear-gradient(135deg, #0f0f0f, #131312);
+        color: #e0e0e0;;
         color: #e0e0e0;
     }
 }

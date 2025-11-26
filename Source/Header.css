@@ -2,19 +2,45 @@ header {
   width: 100%;
   background-color: #b85300e7;
   backdrop-filter: blur(15px);
-  padding: 0.2rem 0;
-  text-align: center;
   box-sizing: border-box;
   position: sticky;
+  display: flex;
   top: 0;
+  align-items: center;
   z-index: 1000;
+  color: #fdf2e4;
 }
+.left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portl {
+  display: block;
+  margin: 0.5rem 2rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: 3px solid #fdf2e4;
+  transition: ease 0.3s;
+}
+.portl:hover {
+  transform: rotate(360deg);
+  cursor: pointer;
+}
+.right {
+  width: 50%;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
 .nag {
-  display: inline-block;
-  color: #ececec;
+  color: #fdf2e4;
   background: none;
   padding: 0.4rem 1rem;
-  width: 12%;
   height: 2.5rem;
   line-height: 2.5rem;
   border: none;
@@ -24,40 +50,62 @@ header {
   transition: ease 0.1s;
   white-space: nowrap;
   text-decoration: none;
+  position: relative;
 }
-.nag:hover {
-  transform: scale(1.1);
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  font-weight: 550;
+
+.nag::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  width: 0;
+  height: 2px;
+  background-color: #fdf2e4;
+  transition: 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nag:hover::after {
+  width: 100%;
 }
 
 @media (max-width: 768px) {
   .nag {
-    width: 18%;
     font-size: 95%;
-    padding: 0.2rem 0.4rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .left {
+    width: 0;
+    display: none;
+  }
+  .right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
   .nag {
-    width: 28%;
     font-size: 85%;
-    padding: 0.2rem 0.4rem;
+    padding: 0.3rem 0.6rem;
     height: 2rem;
     line-height: 2rem;
   }
 }
+
 @media (prefers-color-scheme: dark) {
   header {
-    background-color: #131313f1;
+    background-color: #141414f1;
+    color: #b85300;
   }
   .nag {
     color: #b85300;
   }
-  .nag:hover {
-    color: rgb(255, 199, 126);
+  .nag::after {
+    background-color: #b85300;
   }
-
+  .portl {
+    border: 3px solid #b85300;
+  }
 }

@@ -41,6 +41,7 @@
 }
 
 
+
 .profile img:hover {
   transform: scale(1.1) rotate(3deg);
   box-shadow:
@@ -74,6 +75,7 @@
   padding: 0 1rem;
   line-height: 1.2;
   font-weight: 600;
+  font-size: 120%;
 }
 
 @media (max-width: 768px) {
