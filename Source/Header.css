@@ -9,6 +9,7 @@ header {
   align-items: center;
   z-index: 1000;
   color: #fdf2e4;
+  box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.027);
 }
 .left {
   width: 50%;
