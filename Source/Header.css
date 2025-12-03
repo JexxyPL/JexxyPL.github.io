@@ -1,14 +1,13 @@
 header {
   width: 100%;
-  background-color: #b85300e7;
-  backdrop-filter: blur(15px);
+  background-color: var(--akcent);
   box-sizing: border-box;
   position: sticky;
   display: flex;
   top: 0;
   align-items: center;
   z-index: 1000;
-  color: #fdf2e4;
+  color: #f7f5f5;
   box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.027);
 }
 .left {
@@ -22,7 +21,7 @@ header {
   margin: 0.5rem 2rem;
   height: 3.5rem;
   border-radius: 50%;
-  border: 3px solid #fdf2e4;
+  border: 3px solid #f7f5f5;
   transition: ease 0.3s;
 }
 .portl:hover {
@@ -39,7 +38,7 @@ nav {
 }
 
 .nag {
-  color: #fdf2e4;
+  color: #f7f5f5;
   background: none;
   padding: 0.4rem 1rem;
   height: 2.5rem;
@@ -61,7 +60,7 @@ nav {
   bottom: 5px;
   width: 0;
   height: 2px;
-  background-color: #fdf2e4;
+  background-color: #f7f5f5;
   transition: 0.3s ease;
   transform: translateX(-50%);
 }
@@ -98,15 +97,15 @@ nav {
 @media (prefers-color-scheme: dark) {
   header {
     background-color: #141414f1;
-    color: #b85300;
+    color: var(--akcent);
   }
   .nag {
-    color: #b85300;
+    color: var(--akcent);
   }
   .nag::after {
-    background-color: #b85300;
+    background-color: var(--akcent);
   }
   .portl {
-    border: 3px solid #b85300;
+    border: 3px solid var(--akcent);
   }
 }

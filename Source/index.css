@@ -1,10 +1,15 @@
 :root {
+  --akcent: #b85300;
+  --cien-tekst: 0 0 2px rgba(184, 83, 0, 0.75),0 0 4px rgba(184, 83, 0, 0.55);
+  --cien: 0 0 10px rgba(184, 83, 0, 0.7),0 0 20px rgba(184, 83, 0, 0.5),0 0 30px rgba(184, 83, 0, 0.35);
+  --tlo-strony: linear-gradient(130deg, #fff9f1, #fff8ef);
+  --ciemne-tlo: linear-gradient(135deg, #0f0f0f, #131312);
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(53, 53, 53, 0.87);
-  background: linear-gradient(130deg, #fdf2e4, #dbc8b0);
+  background: var(--tlo-strony);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -26,8 +31,7 @@ html {
 }
 @media (prefers-color-scheme: dark) {
     :root {
-        background: linear-gradient(135deg, #0f0f0f, #131312);
-        color: #e0e0e0;;
+        background: var(--ciemne-tlo);
         color: #e0e0e0;
     }
 }

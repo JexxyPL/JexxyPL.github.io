@@ -61,7 +61,7 @@
     justify-content: center;
     color: white;
     font-size: 90%;
-    background-color: #b85300;
+    background-color: var(--akcent);
     border-radius: 10px;
     height: 2.25rem;
     padding: 0 0.5rem;
@@ -75,7 +75,7 @@
 
 .project:hover .tech {
     background-color: rgba(53, 53, 53, 0.87);
-    color: #b85300;
+    color: var(--akcent);
 }
 
 .project h1 {

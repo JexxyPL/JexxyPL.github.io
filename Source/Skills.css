@@ -14,7 +14,7 @@
     text-decoration: none;
 }
 .skill {
-    background-color: rgb(236, 227, 212);
+    background-color: rgb(255, 252, 248);
     width: 25rem;
     height: 15rem;
     border-radius: 15px;
@@ -55,7 +55,7 @@
 .progresscpp, .progressjs, .progressreact, .progresscs, .progresshtml, .progresscss {
     height: 100%;
     border-radius: 20px 0px 0px 20px;
-    background-color: #b85300;
+    background-color: var(--akcent);
     position: absolute;
     left: 0;
     top: 0;

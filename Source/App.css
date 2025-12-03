@@ -36,7 +36,7 @@
 .profile img {
   border-radius: 50%;
   width: 20rem;
-  border: 10px solid #b85300;
+  border: 10px solid var(--akcent);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -44,10 +44,7 @@
 
 .profile img:hover {
   transform: scale(1.1) rotate(3deg);
-  box-shadow:
-    0 0 10px rgba(184, 83, 0, 0.7),
-    0 0 20px rgba(184, 83, 0, 0.5),
-    0 0 30px rgba(184, 83, 0, 0.35);
+  box-shadow: var(--cien);
   cursor: pointer;
 }
 
@@ -57,10 +54,8 @@
   margin-bottom: 0rem;
 }
 .highlight {
-  color: #b85300;
-  text-shadow:
-    0 0 2px rgba(184, 83, 0, 0.75),
-    0 0 4px rgba(184, 83, 0, 0.55);
+  color: var(--akcent);
+  text-shadow: var(--cien-tekst);
 }
 
 .cursor {
