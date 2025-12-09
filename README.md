@@ -1,1 +1,1 @@
-A website I made when learning react.
+A website I've made using react, for me, for my studies

@@ -6,7 +6,7 @@ function Header() {
         <header>
             <section className="left">
                 <a href="https://github.com/JexxyPL" target='_blank' rel="noopener noreferrer"><img className='portl' src="https://avatars.githubusercontent.com/u/164803938" alt="" srcset="" /></a>
-                <h1>My Portfolio</h1>
+                <h1>JexxyPL</h1>
             </section>
             <section className="right">
                     <nav translate='no' lang="zxx">
