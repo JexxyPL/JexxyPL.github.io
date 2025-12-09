@@ -1,0 +1,4 @@
+src/*.js linguist-language=JavaScript
+src/*.css linguist-language=CSS
+*.html linguist-language=HTML
+*.md linguist-detectable=false
