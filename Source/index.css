@@ -15,6 +15,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@font-face {
+  font-family: "Swera";
+  src: url("assets/Swera-Regular-Demo.otf") format("opentype");
+}
 body {
   margin: 0;
   display: flex;

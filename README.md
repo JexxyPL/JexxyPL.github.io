@@ -1,1 +1,1 @@
-A website I've made using react, for me, for my studies
+A website I made for me using React.js framework. For studying i guess
