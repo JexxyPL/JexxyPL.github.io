@@ -1,44 +1,48 @@
 .skill h1 {
-    font-size: 250%;
+    font-size: clamp(150%, 13vw, 350%);
 }
+
 .skills {
     display: flex;
-    gap: 2rem;
+    gap: clamp(1rem, 2vw, 3rem);
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 80rem;
+    max-width: clamp(20rem, 80vw, 120rem);
     margin: 0 auto;
 }
+
 .skills a {
     color: rgba(53, 53, 53, 0.87);
     text-decoration: none;
 }
+
 .skill {
     background-color: rgb(255, 252, 248);
-    width: 25rem;
-    height: 15rem;
-    border-radius: 15px;
-    padding: 2rem;
+    width: clamp(20rem, 25vw, 35rem);
+    height: clamp(15rem, 15vh, 22rem);
+    border-radius: clamp(10px, 1.5vw, 20px);
+    padding: clamp(1.5rem, 2vw, 3rem);
     align-content: center;
     box-shadow: 0px 0px 10px rgba(37, 37, 37, 0.315);
     box-sizing: border-box;
     transition: ease 0.1s;
 }
+
 .skill:hover {
-    scale: 1.05;
+    transform: scale(1.05);
     cursor: pointer;
 }
 
 .lang {
-    width: 70px;
-    height: 70px;
-    margin-bottom: -1rem;
+    width: clamp(50px, 3.6vw, 100px);
+    height: clamp(50px, 3.6vw, 100px);
+    margin-bottom: clamp(-0.8rem, -1vh, -1.5rem);
 }
 
 .progressbar {
     width: 100%;
-    height: 2.5rem;
-    border-radius: 20px;
+    height: clamp(2rem, 2.5vh, 3.5rem);
+    border-radius: clamp(15px, 2vw, 25px);
     background-color: rgb(150, 150, 150);
     z-index: 1;
     display: flex;
@@ -48,6 +52,7 @@
     color: white;
     font-weight: bold;
 }
+
 .progressbar span {
     z-index: 3;
 }
@@ -70,23 +75,29 @@
 .progresshtml { --target: 90%; }
 .progresscss { --target: 75%; }
 
-
 @keyframes loadinn {
   from { width: 0%; }
   to { width: var(--target); }
 }
+
 @media (prefers-color-scheme: dark) {
     .skill {
-        background-color: rgb(48, 48, 48);
+        background-color: rgb(15, 2, 46);
     }
+    
+    .progressbar {
+        background-color: rgb(149, 124, 240);
+    }
+    
     .skills a {
         color: rgba(255, 255, 255, 0.863);
     }
-     .skill img {
+    
+    .skill img {
         filter: invert(100%);
     }
-
 }
+
 @media (max-width: 768px) {
     .skill {
         width: 20rem;

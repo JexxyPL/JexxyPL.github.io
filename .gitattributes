@@ -1,4 +1,0 @@
-assets/*.js linguist-language=JavaScript
-assets/*.css linguist-language=CSS
-*.html linguist-language=HTML
-*.md linguist-detectable=false

@@ -1,12 +1,12 @@
 .projects {
     display: flex;
-    gap: 2rem;
+    gap: clamp(1rem, 2vw, 3rem);
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 80rem;
+    max-width: clamp(20rem, 80vw, 120rem);
     margin: 0 auto;
-    padding: 1rem;
+    padding: clamp(0.5rem, 1vw, 2rem);
     box-sizing: border-box;
     min-height: 200px;
 }
@@ -15,11 +15,11 @@
     flex-shrink: 0;
     position: relative;
     background-color: rgb(218, 218, 218);
-    width: 25rem;
-    height: 15rem;
-    min-width: 20rem;
-    min-height: 15rem;
-    border-radius: 15px;
+    width: clamp(20rem, 25vw, 35rem);
+    height: clamp(15rem, 15vh, 22rem);
+    min-width: clamp(20rem, 20vw, 25rem);
+    min-height: clamp(15rem, 15vh, 18rem);
+    border-radius: clamp(10px, 1.5vw, 20px);
     overflow: hidden;
     box-shadow: 2px 2px 12px rgba(37, 37, 37, 0.479);
     text-align: center;
@@ -35,6 +35,7 @@
     display: block;
     transition: ease 0.2s;
 }
+
 .project:hover img {
     filter: blur(2px);
 }
@@ -45,12 +46,12 @@
     left: 0;
     width: 100%;
     display: flex;
-    gap: 0.5rem;
+    gap: clamp(0.25rem, 0.5vw, 0.8rem);
     justify-content: flex-end;
     flex-wrap: wrap;
     background-color: rgba(44, 44, 44, 0.5);
     backdrop-filter: blur(15px);
-    padding: 0.75rem;
+    padding: clamp(0.5rem, 0.75vw, 1.2rem);
     box-sizing: border-box;
     z-index: 2;
 }
@@ -60,11 +61,11 @@
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 90%;
+    font-size: clamp(80%, 4.7vw, 110%);
     background-color: var(--akcent);
-    border-radius: 10px;
-    height: 2.25rem;
-    padding: 0 0.5rem;
+    border-radius: clamp(8px, 1vw, 12px);
+    height: clamp(2rem, 2.25vh, 3rem);
+    padding: 0 clamp(0.25rem, 0.5vw, 0.8rem);
     transition: ease 0.2s;
 }
 
@@ -74,7 +75,7 @@
 }
 
 .project:hover .tech {
-    background-color: rgba(53, 53, 53, 0.87);
+    background-color: rgb(15, 2, 46);
     color: var(--akcent);
 }
 
@@ -89,17 +90,18 @@
     color: rgb(243, 243, 243);
     text-align: center;
     text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 2vw, 3rem);
     z-index: 3;
 }
+
 @media (prefers-color-scheme: dark) {
     .project {
-        background-color: rgb(63, 63, 63);
+        background-color: rgb(15, 2, 46);
     }
+    
     .project img {
-        background-color: rgb(63, 63, 63);
+        background-color: rgb(15, 2, 46);
     }
-
 }
 
 @media (max-width: 480px) {
