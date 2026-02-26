@@ -1,41 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap");
+
 :root {
-  --akcent: #b85300;
-  --cien-tekst: 0 0 2px rgba(184, 83, 0, 0.75),0 0 4px rgba(184, 83, 0, 0.55);
-  --cien: 0 0 10px rgba(184, 83, 0, 0.7),0 0 20px rgba(184, 83, 0, 0.5),0 0 30px rgba(184, 83, 0, 0.35);
-  --tlo-strony: linear-gradient(130deg, #fff9f1, #fff8ef);
-  --ciemne-tlo: linear-gradient(135deg, #03040e, #060618);
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(53, 53, 53, 0.87);
-  background: var(--tlo-strony);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    --akcent: #e85d04;
+    --akcent-jasny: #ff8534;
+    --akcent-ciemny: #c44a00;
+    --akcent-subtelny: rgba(232, 93, 4, 0.12);
+    --akcent-obramowanie: rgba(232, 93, 4, 0.3);
+
+    --cien-tekst:
+        0 0 20px rgba(232, 93, 4, 0.6), 0 0 40px rgba(232, 93, 4, 0.3);
+    --cien:
+        0 0 15px rgba(232, 93, 4, 0.6), 0 0 30px rgba(232, 93, 4, 0.4),
+        0 0 60px rgba(232, 93, 4, 0.2);
+    --cien-karta: 0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
+
+    --tlo-strony: #fefcf9;
+    --tlo-karta: #ffffff;
+    --tlo-naglowka: #ffffff;
+    --tekst-glowny: #1a1a1a;
+    --tekst-drugi: #6b6b6b;
+    --linia: rgba(0, 0, 0, 0.08);
+
+    --ciemne-tlo: #111111;
+    --ciemne-karta: #1c1c1c;
+    --ciemne-naglowek: #151515;
+    --ciemny-tekst: #f0ece6;
+    --ciemny-tekst-drugi: #9a9a9a;
+    --ciemna-linia: rgba(255, 255, 255, 0.08);
+
+    font-family: "Outfit", system-ui, sans-serif;
+    line-height: 1.6;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: var(--tekst-glowny);
+    background: var(--tlo-strony);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 @font-face {
-  font-family: "Swera";
-  src: url("assets/Swera-Regular-Demo.otf") format("opentype");
+    font-family: "Swera";
+    src: url("assets/Swera-Regular-Demo.otf") format("opentype");
 }
+
 body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-width: 320px;
-  min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    min-height: 100vh;
 }
+
 html {
-  width: 100%;
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
+
+* {
+    box-sizing: border-box;
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
+        --akcent: #ff6b1a;
+        --akcent-jasny: #ff8c4a;
+        --akcent-ciemny: #e85d04;
+        --akcent-subtelny: rgba(255, 107, 26, 0.1);
+        --akcent-obramowanie: rgba(255, 107, 26, 0.25);
+
+        --cien-tekst:
+            0 0 20px rgba(255, 107, 26, 0.7), 0 0 40px rgba(255, 107, 26, 0.35);
+        --cien:
+            0 0 15px rgba(255, 107, 26, 0.6), 0 0 35px rgba(255, 107, 26, 0.35),
+            0 0 70px rgba(255, 107, 26, 0.15);
+        --cien-karta:
+            0 4px 24px rgba(0, 0, 0, 0.3), 0 1px 4px rgba(0, 0, 0, 0.2);
+
         background: var(--ciemne-tlo);
-        color: #e0e0e0;
+        color: var(--ciemny-tekst);
     }
 }

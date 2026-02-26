@@ -1,128 +1,167 @@
-.projects {
-    display: flex;
-    gap: clamp(1rem, 2vw, 3rem);
+.projekty-siatka {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(clamp(20rem, 28vw, 34rem), 1fr)
+    );
+    gap: clamp(1rem, 2vw, 1.5rem);
     width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: clamp(20rem, 80vw, 120rem);
+    max-width: clamp(30rem, 85vw, 80rem);
     margin: 0 auto;
-    padding: clamp(0.5rem, 1vw, 2rem);
-    box-sizing: border-box;
-    min-height: 200px;
 }
 
 .project {
-    flex-shrink: 0;
     position: relative;
-    background-color: rgb(218, 218, 218);
-    width: clamp(20rem, 25vw, 35rem);
-    height: clamp(15rem, 15vh, 22rem);
-    min-width: clamp(20rem, 20vw, 25rem);
-    min-height: clamp(15rem, 15vh, 18rem);
-    border-radius: clamp(10px, 1.5vw, 20px);
+    background-color: var(--tlo-karta);
+    border: 1px solid var(--linia);
+    border-radius: clamp(14px, 1.5vw, 20px);
     overflow: hidden;
-    box-shadow: 2px 2px 12px rgba(37, 37, 37, 0.479);
-    text-align: center;
-    transition: 0.2s ease;
+    box-shadow: var(--cien-karta);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.25s ease;
 }
 
-.project img {
-    background-color: rgb(218, 218, 218);
+.project:hover {
+    transform: translateY(-5px);
+    border-color: var(--akcent-obramowanie);
+    box-shadow: 0 12px 40px rgba(232, 93, 4, 0.12);
+    cursor: pointer;
+}
+
+.projekt-podglad {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--tlo-strony);
+    position: relative;
+}
+
+.projekt-podglad::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(0, 0, 0, 0.35) 100%
+    );
+    pointer-events: none;
+}
+
+.projekt-podglad img {
     width: 100%;
     height: 100%;
-    filter: blur(6px);
     object-fit: cover;
     display: block;
-    transition: ease 0.2s;
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+    filter: saturate(0.9);
 }
 
-.project:hover img {
-    filter: blur(2px);
+.project:hover .projekt-podglad img {
+    transform: scale(1.05);
+    filter: saturate(1.1);
+}
+
+.projekt-info {
+    padding: clamp(0.9rem, 1.5vw, 1.4rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.projekt-tytul {
+    margin: 0;
+    font-size: clamp(0.95rem, 1.1vw, 1.2rem);
+    font-weight: 700;
+    color: var(--tekst-glowny);
+    letter-spacing: -0.01em;
 }
 
 .techs {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     display: flex;
-    gap: clamp(0.25rem, 0.5vw, 0.8rem);
-    justify-content: flex-end;
+    gap: clamp(0.3rem, 0.4vw, 0.5rem);
     flex-wrap: wrap;
-    background-color: rgba(44, 44, 44, 0.5);
-    backdrop-filter: blur(15px);
-    padding: clamp(0.5rem, 0.75vw, 1.2rem);
-    box-sizing: border-box;
-    z-index: 2;
+    justify-content: flex-end;
 }
 
 .tech {
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: clamp(80%, 4.7vw, 110%);
-    background-color: var(--akcent);
-    border-radius: clamp(8px, 1vw, 12px);
-    height: clamp(2rem, 2.25vh, 3rem);
-    padding: 0 clamp(0.25rem, 0.5vw, 0.8rem);
-    transition: ease 0.2s;
-}
-
-.project:hover {
-    transform: scale(1.05);
-    cursor: pointer;
+    color: var(--akcent);
+    font-size: clamp(0.7rem, 0.75vw, 0.85rem);
+    font-weight: 600;
+    background-color: var(--akcent-subtelny);
+    border: 1px solid var(--akcent-obramowanie);
+    border-radius: 6px;
+    padding: 0.2rem clamp(0.4rem, 0.5vw, 0.6rem);
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    font-family: "Space Mono", monospace;
 }
 
 .project:hover .tech {
-    background-color: rgb(15, 2, 46);
-    color: var(--akcent);
+    background-color: var(--akcent);
+    color: white;
+    border-color: var(--akcent);
 }
 
-.project h1 {
-    white-space: nowrap;
+.projekt-strzalka {
     position: absolute;
-    font-weight: bolder;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -100%);
-    margin: 0;
-    color: rgb(243, 243, 243);
-    text-align: center;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-    font-size: clamp(1.5rem, 2vw, 3rem);
-    z-index: 3;
+    top: clamp(0.6rem, 1vw, 1rem);
+    right: clamp(0.6rem, 1vw, 1rem);
+    width: clamp(28px, 2vw, 36px);
+    height: clamp(28px, 2vw, 36px);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.projekt-strzalka svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--akcent);
+    stroke-width: 2.5;
+    fill: none;
+}
+
+.project:hover .projekt-strzalka {
+    opacity: 1;
+    transform: scale(1);
 }
 
 @media (prefers-color-scheme: dark) {
     .project {
-        background-color: rgb(15, 2, 46);
+        background-color: var(--ciemne-karta);
+        border-color: var(--ciemna-linia);
     }
-    
-    .project img {
-        background-color: rgb(15, 2, 46);
+
+    .projekt-tytul {
+        color: var(--ciemny-tekst);
+    }
+
+    .projekt-podglad {
+        background: #222;
+    }
+
+    .projekt-strzalka {
+        background: rgba(30, 30, 30, 0.85);
     }
 }
 
 @media (max-width: 480px) {
-    .projects {
-        gap: 1rem;
-        padding: 0.5rem;
-    }
-    
-    .project {
-        width: 100%;
-        max-width: 25rem;
-        height: 15rem;
-    }
-    
-    .techs {
-        justify-content: flex-start;
-    }
-    
-    .tech {
-        font-size: 80%;
-        height: 2rem;
-        padding: 0 0.25rem;
+    .projekty-siatka {
+        grid-template-columns: 1fr;
     }
 }

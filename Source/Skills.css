@@ -1,105 +1,157 @@
-.skill h1 {
-    font-size: clamp(150%, 13vw, 350%);
-}
-
-.skills {
-    display: flex;
-    gap: clamp(1rem, 2vw, 3rem);
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: clamp(20rem, 80vw, 120rem);
+.umiejetnosci-siatka {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(clamp(18rem, 22vw, 28rem), 1fr)
+    );
+    gap: clamp(0.8rem, 1.5vw, 1.2rem);
+    width: 100%;
+    max-width: clamp(30rem, 85vw, 80rem);
     margin: 0 auto;
 }
 
-.skills a {
-    color: rgba(53, 53, 53, 0.87);
-    text-decoration: none;
-}
-
 .skill {
-    background-color: rgb(255, 252, 248);
-    width: clamp(20rem, 25vw, 35rem);
-    height: clamp(15rem, 15vh, 22rem);
-    border-radius: clamp(10px, 1.5vw, 20px);
-    padding: clamp(1.5rem, 2vw, 3rem);
-    align-content: center;
-    box-shadow: 0px 0px 10px rgba(37, 37, 37, 0.315);
+    background-color: var(--tlo-karta);
+    border: 1px solid var(--linia);
+    border-radius: clamp(12px, 1.2vw, 18px);
+    padding: clamp(1.2rem, 1.8vw, 2rem);
+    text-align: left;
+    box-shadow: var(--cien-karta);
     box-sizing: border-box;
-    transition: ease 0.1s;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .skill:hover {
-    transform: scale(1.05);
+    transform: translateY(-4px);
+    border-color: var(--akcent-obramowanie);
+    box-shadow: 0 8px 28px rgba(232, 93, 4, 0.1);
     cursor: pointer;
 }
 
+.skill-naglowek {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.6rem, 0.8vw, 1rem);
+    margin-bottom: clamp(0.8rem, 1.2vw, 1.2rem);
+}
+
 .lang {
-    width: clamp(50px, 3.6vw, 100px);
-    height: clamp(50px, 3.6vw, 100px);
-    margin-bottom: clamp(-0.8rem, -1vh, -1.5rem);
+    width: clamp(32px, 2.5vw, 44px);
+    height: clamp(32px, 2.5vw, 44px);
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.skill-naglowek h3 {
+    margin: 0;
+    font-size: clamp(0.95rem, 1.05vw, 1.15rem);
+    font-weight: 700;
+    color: var(--tekst-glowny);
+    letter-spacing: -0.01em;
+}
+
+.skill-poziom-tekst {
+    margin: 0 0 0 auto;
+    font-size: clamp(0.65rem, 0.7vw, 0.78rem);
+    font-family: "Space Mono", monospace;
+    color: var(--akcent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
 }
 
 .progressbar {
     width: 100%;
-    height: clamp(2rem, 2.5vh, 3.5rem);
-    border-radius: clamp(15px, 2vw, 25px);
-    background-color: rgb(150, 150, 150);
-    z-index: 1;
-    display: flex;
+    height: clamp(6px, 0.6vw, 10px);
+    border-radius: 999px;
+    background-color: var(--linia);
     position: relative;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
+    overflow: hidden;
 }
 
-.progressbar span {
-    z-index: 3;
-}
-
-.progresscpp, .progressjs, .progressreact, .progresscs, .progresshtml, .progresscss {
+.progresscpp,
+.progressjs,
+.progressreact,
+.progresscs,
+.progresshtml,
+.progresscss {
     height: 100%;
-    border-radius: 20px 0px 0px 20px;
-    background-color: var(--akcent);
+    border-radius: 999px;
+    background: linear-gradient(
+        90deg,
+        var(--akcent-ciemny),
+        var(--akcent-jasny)
+    );
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 2;
-    animation: loadinn 1.5s ease forwards;
+    animation: ladowanie 1.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.progresscpp { --target: 40%; }
-.progressjs { --target: 52%; }
-.progressreact { --target: 20%; }
-.progresscs { --target: 35%; }
-.progresshtml { --target: 90%; }
-.progresscss { --target: 75%; }
+.progresscpp {
+    --cel: 40%;
+}
+.progressjs {
+    --cel: 52%;
+}
+.progressreact {
+    --cel: 20%;
+}
+.progresscs {
+    --cel: 35%;
+}
+.progresshtml {
+    --cel: 90%;
+}
+.progresscss {
+    --cel: 75%;
+}
 
-@keyframes loadinn {
-  from { width: 0%; }
-  to { width: var(--target); }
+@keyframes ladowanie {
+    from {
+        width: 0%;
+    }
+    to {
+        width: var(--cel);
+    }
 }
 
 @media (prefers-color-scheme: dark) {
     .skill {
-        background-color: rgb(15, 2, 46);
+        background-color: var(--ciemne-karta);
+        border-color: var(--ciemna-linia);
+        color: var(--ciemny-tekst);
     }
-    
+
+    .skill-naglowek h3 {
+        color: var(--ciemny-tekst);
+    }
+
     .progressbar {
-        background-color: rgb(149, 124, 240);
+        background-color: rgba(255, 255, 255, 0.08);
     }
-    
-    .skills a {
-        color: rgba(255, 255, 255, 0.863);
-    }
-    
-    .skill img {
+
+    .lang {
         filter: invert(100%);
+    }
+
+    .skill:hover {
+        border-color: var(--akcent-obramowanie);
     }
 }
 
 @media (max-width: 768px) {
-    .skill {
-        width: 20rem;
+    .umiejetnosci-siatka {
+        grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .umiejetnosci-siatka {
+        grid-template-columns: 1fr;
     }
 }
