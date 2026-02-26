@@ -73,7 +73,7 @@ function App() {
                     <section
                         className="about-sekcja"
                         style={{ marginTop: "clamp(1.5rem, 2.5vh, 2.5rem)" }}>
-                        <p className="sekcja-naglowek">About Me</p>
+                        <p className="sekcja-naglowek">{"</ About Me / >"}</p>
                         <div className="o-mnie-siatka">
                             <div className="o-mnie-kafelek">
                                 <span className="kafelek-ikona">🖥️</span>
