@@ -75,7 +75,7 @@
 
 .progresscpp,
 .progressjs,
-.progressreact,
+.progresslinux,
 .progresscs,
 .progresshtml,
 .progresscss {
@@ -98,11 +98,11 @@
 .progressjs {
     --cel: 52%;
 }
-.progressreact {
-    --cel: 20%;
+.progresslinux {
+    --cel: 70%;
 }
 .progresscs {
-    --cel: 35%;
+    --cel: 64%;
 }
 .progresshtml {
     --cel: 90%;

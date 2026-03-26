@@ -1,7 +1,7 @@
 import cpplogo from "./assets/cpp.png";
-import cslogo from "./assets/csharp.png";
+import cisco from "./assets/cisco.png";
 import jslogo from "./assets/js.png";
-import reactlogo from "./assets/react.png";
+import linuxlogo from "./assets/linux.png";
 import htmllogo from "./assets/html.png";
 import csslogo from "./assets/css.png";
 import "./App.css";
@@ -33,12 +33,12 @@ const umiejetnosci = [
         link: "https://www.codecademy.com/learn/introduction-to-javascript",
     },
     {
-        id: "react",
-        logo: reactlogo,
-        nazwa: "React",
-        poziom: "Novice",
-        klasa: "progressreact",
-        link: "https://www.codecademy.com/learn/react-101",
+        id: "linux",
+        logo: linuxlogo,
+        nazwa: "Linux Server Administration",
+        poziom: "Advanced",
+        klasa: "progresslinux",
+        link: "https://training.linuxfoundation.org/training/introduction-to-linux/",
     },
     {
         id: "cpp",
@@ -50,11 +50,11 @@ const umiejetnosci = [
     },
     {
         id: "cs",
-        logo: cslogo,
-        nazwa: "C#",
-        poziom: "Intermediate",
+        logo: cisco,
+        nazwa: "Cisco Networking",
+        poziom: "Advanced",
         klasa: "progresscs",
-        link: "https://www.codecademy.com/learn/learn-c-sharp",
+        link: "https://www.netacad.com/catalogs/learn",
     },
 ];
 
