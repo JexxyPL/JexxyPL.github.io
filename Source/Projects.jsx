@@ -3,11 +3,11 @@ import "./Projects.css";
 
 const projekty = [
     {
-        id: "todo",
-        href: "https://github.com/JexxyPL/ToDoApp",
-        img: "https://raw.githubusercontent.com/JexxyPL/ToDoApp/refs/heads/main/screenshot.png",
-        tytul: "To Do App!",
-        technologie: ["Electron", "JavaScript"],
+        id: "DNS",
+        href: "https://github.com/JexxyPL/DNSimplified",
+        img: "https://raw.githubusercontent.com/JexxyPL/DNSimplified/refs/heads/main/icon.png",
+        tytul: "DNSimplified",
+        technologie: ["C++", "BIND9", "Linux"],
     },
     {
         id: "smb",
@@ -15,6 +15,13 @@ const projekty = [
         img: "https://raw.githubusercontent.com/JexxyPL/SMBHelper/refs/heads/main/Icon.png",
         tytul: "SMBHelper",
         technologie: ["C++", "Linux"],
+    },
+    {
+        id: "todo",
+        href: "https://github.com/JexxyPL/ToDoApp",
+        img: "https://raw.githubusercontent.com/JexxyPL/ToDoApp/refs/heads/main/screenshot.png",
+        tytul: "To Do App!",
+        technologie: ["Electron", "JavaScript"],
     },
 ];
 
