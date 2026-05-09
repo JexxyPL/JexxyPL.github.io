@@ -59,9 +59,9 @@ function App() {
                         <span className="highlight">
                             <TypingText
                                 words={[
-                                    "Programmer",
+                                    "Server Administrator",
                                     "Technician",
-                                    "Web Developer",
+                                    "Linux guy",
                                 ]}
                             />
                         </span>
@@ -86,8 +86,8 @@ function App() {
                                 <span className="kafelek-ikona">🎓</span>
                                 <p>
                                     Studying Computer & Electronics Technology,
-                                    doing web development as a hobby on the
-                                    side.
+                                    doing random scripts I guess as a hobby on
+                                    the side.
                                 </p>
                             </div>
                             <div className="o-mnie-kafelek">
